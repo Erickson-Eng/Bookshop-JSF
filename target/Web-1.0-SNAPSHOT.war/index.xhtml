@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+    <h:head>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <p:fieldset legend="CRUD BOOK">
+                <p:panelGrid columns="4"
+                             columnClasses="ui-grid-col-2, ui-grid-col-4, ui-grid-col-2, ui-grid-col-4"
+                             layout="grid"
+                             styleClass="ui-panelgrid-blank ui-fluid">
+                    <p:outputLabel for="@next" value="Title" />
+                    <p:inputText value="#{authorBean.author.name}"/>
+
+                    <p:row>
+                        <p:column styleClass="ui-grid-col-12">
+                            <p:commandButton value="Save" styleClass="p-mr-2" style="width: auto" action="#{authorBean.save}"/>
+                        </p:column>
+                    </p:row>
+                </p:panelGrid>
+            </p:fieldset>
+        </h:form>
+
+    </h:body>
+</f:view>
+</html>
